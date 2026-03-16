@@ -1,0 +1,4 @@
+[Mon Mar 16 10:19:53.122865 2026] [mpm_winnt:notice] [pid 6848:tid 448] AH00455: Apache/2.4.66 (Win64) PHP/8.5.1 configured -- resuming normal operations
+[Mon Mar 16 10:19:53.122865 2026] [mpm_winnt:notice] [pid 6848:tid 448] AH00456: Apache Lounge VS18 server built: Feb 23 2026 10:01:09
+[Mon Mar 16 10:19:53.122865 2026] [core:notice] [pid 6848:tid 448] AH00094: Command line: 'D:\\ias_cryptography\\Apache24\\bin\\httpd.exe -d D:/ias_cryptography/Apache24'
+[Mon Mar 16 10:19:53.122865 2026] [mpm_winnt:notice] [pid 6848:tid 448] AH00418: Parent: Created child process 14292
