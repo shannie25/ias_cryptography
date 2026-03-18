@@ -1,10 +1,16 @@
 <?php
-
+ 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Cipher Selection Menu</title>
+<style>
+.matrix {
+    width: 30px;
+    height: 30px;
+}
+</style>
 </head>
 <body>
 
@@ -37,9 +43,44 @@
 
     <br><br>
 
+    <div id="hillKey">
+        <h3>Hill Cipher Key</h3>
+
+        <input type="number" name="key[0][0]" placeholder="" class="matrix">
+        <input type="number" name="key[0][1]" placeholder="" class="matrix">
+        <input type="number" name="key[0][2]" placeholder="" class="matrix">
+        <br><br>
+
+        <input type="number" name="key[1][0]" placeholder="" class="matrix">
+        <input type="number" name="key[1][1]" placeholder="" class="matrix">
+        <input type="number" name="key[1][2]" placeholder="" class="matrix">
+        <br><br>
+
+        <input type="number" name="key[2][0]" placeholder="" class="matrix">
+        <input type="number" name="key[2][1]" placeholder="" class="matrix">
+        <input type="number" name="key[2][2]" placeholder="" class="matrix">
+    </div>
+
+    <br>
     <input type="submit" value="Process">
 
 </form>
 
 </body>
+
+<script>
+    const cipherSelect = document.getElementById("cipher");
+    const hillKey = document.getElementById("hillKey");
+
+
+    hillKey.style.display = "none";
+
+    cipherSelect.addEventListener("change", function() {
+        if (this.value === "hill") {
+            hillKey.style.display = "block";
+        } else {
+            hillKey.style.display = "none";
+        }
+    });
+</script>
 </html>
