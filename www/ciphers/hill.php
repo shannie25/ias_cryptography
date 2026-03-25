@@ -51,4 +51,33 @@ function prepareText($text) {
     return $text;
 }
 
+function hillEncrypt($plaintext, $key) {
+
+    $plaintext = prepareText($plaintext);
+    $ciphertext = "";
+
+    for ($i = 0; $i < strlen($plaintext); $i += 3) {
+
+      
+        $p = [
+            charToNum($plaintext[$i]),
+            charToNum($plaintext[$i+1]),
+            charToNum($plaintext[$i+2])
+        ];
+
+        
+        for ($row = 0; $row < 3; $row++) {
+            $sum = 0;
+
+            for ($col = 0; $col < 3; $col++) {
+                $sum += $key[$row][$col] * $p[$col];
+            }
+
+            $ciphertext .= numToChar($sum % 26);
+        }
+    }
+
+    return $ciphertext;
+}
+
 ?>
