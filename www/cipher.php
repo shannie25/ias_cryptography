@@ -64,6 +64,12 @@
     <br>
     <input type="submit" value="Process">
 
+    <div id="vigenereKey">
+        <label for="vigenere_key">Vigenère Key (letters only):</label><br>
+        <input type="text" name="vigenere_key" placeholder="">
+    </div>
+
+
 </form>
 
 </body>
