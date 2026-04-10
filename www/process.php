@@ -7,6 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mode = $_POST['mode'];
     $text = $_POST['text'];
     $key = $_POST['key'] ?? null;
+    $vigenere_key = $_POST['vigenere_key'] ?? '';
+    $playfair_key =  $_POST['playfair_key'] ?? '';
+    $affineA = $POST['affineA'] ?? '';
+    $affineB = $_POST['affineB'] ?? '';
 
     $result = "";
 
@@ -23,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         case "vigenere":
             include "ciphers/vigenere.php";
-            $result = vigenereCipher($text, $mode);
+            $result = vigenereCipher($text, $mode, $vigenere_key);
             break;
 
         case "affine":
