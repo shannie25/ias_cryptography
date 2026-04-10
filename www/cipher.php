@@ -77,16 +77,17 @@
 <script>
     const cipherSelect = document.getElementById("cipher");
     const hillKey = document.getElementById("hillKey");
+    const vigenereKey = document.getElementById("vigenereKey");
 
 
     hillKey.style.display = "none";
 
     cipherSelect.addEventListener("change", function() {
-        if (this.value === "hill") {
-            hillKey.style.display = "block";
-        } else {
-            hillKey.style.display = "none";
-        }
+        hillKey.style.display = this.value === "hill" ? "block" : "none";
+        vigenereKey.style.display = this.value === "vigenere" ? "block" : "none";
     });
+
+
+
 </script>
 </html>
