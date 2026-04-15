@@ -75,6 +75,15 @@
 </body>
 
 <script>
+
+    const playfairKey = document.getElementById("playfairKey");
+    playfairKey.style.display = "none";
+    
+    cipherSelect.addEventListener("change", function() {
+        hillKey.style.display = this.value === "hill" ? "block" : "none";
+        vigenereKey.style.display = this.value === "vigenere" ? "block" : "none";
+        playfairKey.style.display = this.value === "playfair" ? "block" : "none";
+});
     const cipherSelect = document.getElementById("cipher");
     const hillKey = document.getElementById("hillKey");
     const vigenereKey = document.getElementById("vigenereKey");
