@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $key = $_POST['key'] ?? null;
     $vigenere_key = $_POST['vigenere_key'] ?? '';
     $playfair_key =  $_POST['playfair_key'] ?? '';
-    $affineA = $POST['affineA'] ?? '';
+    $affineA = $_POST['affineA'] ?? '';
     $affineB = $_POST['affineB'] ?? '';
 
     $result = "";
